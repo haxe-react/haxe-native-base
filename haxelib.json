@@ -1,0 +1,16 @@
+{
+  "name": "native-base",
+  "license": "MIT",
+  "tags": [
+    "native-base",
+    "react-native",
+    "extern"
+  ],
+  "classPath": "src",
+  "contributors": [
+    "kevinresol"
+  ],
+  "releasenote": "initial release",
+  "version": "0.0.0",
+  "dependencies": {}
+}
