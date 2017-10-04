@@ -5,6 +5,6 @@ import react.native.component.props.*;
 
 @:jsRequire('native-base', 'Content')
 extern class Content extends ReactComponentOfProps<{
-	> ViewProps,
+	> ScrollViewProps,
 	?padder:Bool,
 }> {}
