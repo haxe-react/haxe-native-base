@@ -16,6 +16,7 @@ extern class Item extends ReactComponentOfProps<{
 	?disabled:Bool,
 	?regular:Bool,
 	?last:Bool,
+	?success:Bool,
 	?error:Bool,
 	?label:String,
 	?value:String,
