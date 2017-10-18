@@ -4,4 +4,7 @@ import react.ReactComponent;
 import react.native.component.props.*;
 
 @:jsRequire('native-base', 'Header')
-extern class Header extends ReactComponentOfProps<{>Props,}> {}
+extern class Header extends ReactComponentOfProps<{
+	> ViewProps,
+	?searchBar:Bool,
+}> {}
