@@ -1,8 +1,7 @@
 package react.native.native_base;
 
 import react.ReactComponent;
-import react.native.component.props.*;
-import react.native.component.props.ViewProps;
+import react.component.props.*;
 
 @:jsRequire('native-base', 'Icon')
 extern class Icon extends ReactComponentOfProps<{
