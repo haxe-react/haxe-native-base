@@ -10,4 +10,6 @@ extern class ListItem extends ReactComponentOfProps<{
 	?onPress:EitherType<Void->Void, Void->Dynamic>,
 	?avatar:Bool,
 	?button:Bool,
+	?thumbnail:Bool,
+	?itemDivider:Bool,
 }> {}

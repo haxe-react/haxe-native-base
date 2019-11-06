@@ -6,10 +6,10 @@ import react.native.component.props.*;
 
 @:jsRequire('native-base', 'Thumbnail')
 extern class Thumbnail extends ReactComponentOfProps<{
-	> Props,
+	// > ViewProps,
 	> ImageProps,
-	?size:Int,
 	?square:Bool,
 	?large:Bool,
 	?small:Bool,
+	// ?source:{uri:String}
 }> {}
