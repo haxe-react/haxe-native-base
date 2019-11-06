@@ -2,7 +2,7 @@ package react.native.native_base;
 
 import react.ReactComponent;
 import react.component.props.*;
-import react.native.component.props.*;
+import react.native.component.props.ViewProps;
 
 @:jsRequire('native-base', 'Thumbnail')
 extern class Thumbnail extends ReactComponentOfProps<{

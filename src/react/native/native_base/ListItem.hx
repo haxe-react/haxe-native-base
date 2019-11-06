@@ -2,7 +2,7 @@ package react.native.native_base;
 
 import haxe.extern.EitherType;
 import react.ReactComponent;
-import react.native.component.props.*;
+import react.native.component.props.ViewProps;
 
 @:jsRequire('native-base', 'ListItem')
 extern class ListItem extends ReactComponentOfProps<{
