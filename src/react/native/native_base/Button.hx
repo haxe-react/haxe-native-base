@@ -1,7 +1,7 @@
 package react.native.native_base;
 
 import react.ReactComponent;
-import react.native.component.props.*;
+import react.native.component.props.ViewProps;
 
 @:jsRequire('native-base', 'Button')
 extern class Button extends ReactComponentOfProps<{
@@ -9,6 +9,7 @@ extern class Button extends ReactComponentOfProps<{
 	?active:Bool,
 	?full:Bool,
 	?block:Bool,
+	?small:Bool,
 	?bordered:Bool,
 	?rounded:Bool,
 	?transparent:Bool,
@@ -18,4 +19,5 @@ extern class Button extends ReactComponentOfProps<{
 	?warning:Bool,
 	?success:Bool,
 	?dark:Bool,
+	?onClick:Void->Void
 }> {}
