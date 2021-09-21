@@ -1,28 +1,36 @@
 package react.native.native_base;
 
-import react.native.component.props.ViewStyle;
-import react.ReactComponent;
-import react.native.component.props.ViewProps;
-import react.native.component.props.TextStyle;
+import react.native.native_base.Box.BoxProps;
+import haxe.extern.EitherType;
+import react.ReactType;
 
-@:jsRequire('native-base', 'Toast')
-extern class Toast extends ReactComponentOfProps<{
-	> ViewProps,
-}> {
-	public static function show(input:ToastOpts):Void;
-	public static function hide(input:ToastOpts):Void;
+@:jsRequire('native-base')
+extern class Toast {
+  public static function useToast():ToastComp;
+}
+
+extern class ToastComp {
+	public function show(input:ToastOpts):Void;
 }
 
 typedef ToastOpts = {
-	var ?text:String;
-	var ?textStyle:TextStyle;
-	var ?buttonText:String;
-	var ?buttonTextStyle:{};
-	var ?buttonStyle:ViewStyle;
-	var ?position:ToastPosition;
-	var ?type:ToastType;
-	var ?duration:Float;
-	var ?onClose:String->Void;
+	>BoxProps,
+	var ?title:ReactType;
+	var ?descripton:ReactType;
+	var ?duration:Int;
+	var ?id:EitherType<String, Int>;
+	var ?isClosable:Bool;
+	var ?onCloseComplete:Void->Void;
+	var ?placement:ToastPosition;
+	var ?render:(props:ToastProps)->Void;
+	var ?status:ToastStatus;
+	var ?variant:ToastVariant;
+	var ?accessibilityAnnouncement:String;
+}
+
+typedef ToastProps = {
+	var id:EitherType<String, Int>;
+	var onClose:String->Void;
 }
 
 enum abstract ToastPosition(String) {
@@ -30,9 +38,24 @@ enum abstract ToastPosition(String) {
 	var bottom;
 }
 
-enum abstract ToastType(String) {
+enum abstract ToastStatus(String) {
+	var info;
 	var success;
 	var warning;
-	var danger;
+	var error;
+}
+
+enum abstract AccessibilityLiveRegionTypes(String) {
+	var none;
+	var polite;
+	var assertive;
+}
+
+enum abstract ToastVariant(String) {
+	var solid;
+	var subtle;
+	var left_accent = 'left-accent';
+	var outline;
+	var outline_light = 'outline-light';
 }
 
